@@ -24,6 +24,7 @@ all_value = df['total_weighted_score'].sum()
 
 # Initialize the Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 auth = dash_auth.BasicAuth(
     app,
