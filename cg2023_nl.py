@@ -1,4 +1,3 @@
-pip install dash-auth
 
 import pandas as pd
 import dash
@@ -9,10 +8,10 @@ import plotly.express as px
 import dash_table
 import dash_auth
 
-# Keep this out of source code repository - save in a file or a database
-VALID_USERNAME_PASSWORD_PAIRS = {
-    'cg': '2023'
-}
+# # Keep this out of source code repository - save in a file or a database
+# VALID_USERNAME_PASSWORD_PAIRS = {
+#     'cg': '2023'
+# }
 
 # Read the CSV data
 url = "https://raw.githubusercontent.com/yoecon/cg_survey_2023/main/CG2023_CALCULATED_SCORE.csv"
@@ -28,10 +27,10 @@ all_value = df['total_weighted_score'].sum()
 app = dash.Dash(__name__)
 server = app.server
 
-auth = dash_auth.BasicAuth(
-    app,
-    VALID_USERNAME_PASSWORD_PAIRS
-)
+# auth = dash_auth.BasicAuth(
+#     app,
+#     VALID_USERNAME_PASSWORD_PAIRS
+# )
 
 # Define the layout of the app
 app.layout = html.Div([
